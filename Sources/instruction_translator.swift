@@ -74,11 +74,19 @@ struct instruction_translator: ParsableCommand {
             case ADD_FUNC:
                 print("add \(fieldR3(instr)), \(fieldR1(instr)), \(fieldR2(instr))\n"
                 + "literal value: \(instr)\noffset: \(offset(instr))\n")
+                break;
             default:
                 print("Haven't done that yet ¯\\_(ツ)_/¯\n")
+                break;
             }
+        case ADDI_OP:
+            print("addi \(fieldR2(instr)) \(fieldR1(instr)) \(offset(instr))\n")
+            
+            break;
+            
         default:
             print("Haven't done that yet ¯\\_(ツ)_/¯\n")
+            break;
         }
     }
 }
